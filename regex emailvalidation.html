@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var text = document.getElementById("text1").value;
+            //var regx=/^([a-zA-z0-9\.-]+)@(gmail).(com)/;
+            var regx=/^([a-zA-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;//dada.-@raju3.com.in
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML="valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+
+            }
+            else
+            {
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="text1" placeholder="mobile number" type="text"><br>
+        <label id="lbltext" style="color: red;visibility:hidden" for="">Invalid</label>
+        <br>
+        <button onclick="validate()" type="button">click</button>
+        
+    </form>
+    
+</body>
+</html>

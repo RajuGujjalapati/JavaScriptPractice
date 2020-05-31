@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>char set and ranges</title>
+    <script>
+        function validate()
+        {
+            var username = document.getElementById("uname").value;
+            var regx=/[a-z A-Z 0-9]imple/i;//case sensitive
+            //var regx=/[0-5]a[6-9]v[a-z]/
+            // var regx=/[^a-z]/ other than a-z
+            //it accepts as python
+            if (regx.test(username))
+            {
+                alert("Valid username");
+                document.getElementById("lbluser").style.visibility="hidden";
+
+            }
+            else
+            {
+                document.getElementById("lbluser").style.visibility="hidden";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="uname" placeholder="username"  type="text"><br><br>
+    <label id="lbluser" for="" style="color: aqua; visibility:hidden">*INVALID </label>
+    <br><br>
+    <button onclick="validate()"   type="submit">submit</button>
+    
+</body>
+</html>

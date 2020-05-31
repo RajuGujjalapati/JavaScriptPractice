@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var username=document.getElementById("uname");
+            var password=document.getElementById("pass");
+            if (username.value.trim()=="")
+            {
+               // alert("Blank not allowed");
+                username.style.border="solid 2px red";
+                //this shows red mark when we left balnk 
+                document.getElementById("lbluser").style.visibility="visible";
+                return false;
+            }
+            else if(password.value.trim()=="")
+            {
+                alert("Blank password");
+                return false;
+            }
+            else if(password.value.trim().length<8)
+            {
+                alert("Password too short");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit=" return validate();"action="formtag message.html">
+        //this form action helps us to make an action when we done width
+        //some function above
+        <input id="uname" placeholder="username"  type="text"><br><br>
+        <label id="lbluser" for="" style="color: aqua; visibility:hidden">*INVALID </label>
+        //initially the visibility is hidden.
+        <input id="pass" type="password"  placeholder="password">
+        <br>
+        <br>
+        <button onclick="validate()"   type="submit">submit</button>
+    </form>
+    
+</body>
+</html>

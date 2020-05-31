@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* setTimeout() allows to execcute statements ONCE after an interval.
+            clearTimeout() method clears a timer set with setTimeout() method.
+            setInterval() allows you to execute stattremnts REPEATEDLY afetr an interval,
+            clearInterval() method clears a timer set with the serInterval()
+            */
+            var ID=10;
+            var seconds=0;
+            function printMsg()
+            {
+                //document.getElementById("op").innerHTML="5 seconds have passed ";
+                document.getElementById("op").innerHTML=seconds+"seconds";
+                seconds++;
+
+            }
+            function start()
+            {   //document and window both are objects in 'js'
+                // window object has some more functionality when compared to document
+                //sometimes we use window and some time we use document.
+                //ID=window.setTimeout(printMsg,5000);
+                ID=window.setInterval(printMsg,1000);
+            }
+            function stop()
+            {
+                //window.clearTimeout(ID);
+                window.clearInterval(ID);
+                //this time out will stop before execution , when we click on 'stop'
+            }
+    </script>
+
+</head>
+<body>
+    <button onclick="start()" id="btnAdd">start</button>
+    <h2 id="op">some text</h2>
+    <button onclick="stop()" id="btnstop">stop</button>
+</body>
+</html>

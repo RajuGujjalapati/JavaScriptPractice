@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading1">Setting up java query</h2>
+    <button  onclick="fn1()" id="btn1" >click </button>
+    
+    
+</body>
+<script src="js/jquery.js"></script>
+//jquery should be in below bcz we loaded it in above.
+<script>
+    function fn1()
+    {
+        $("#heading1").fadeToggle(2000);
+        //$-represents calling the javascript function.
+        //'#'-'id' uses for calling 'id' properties.
+        //'.'-'classes' 'class' properties.
+        //by clicking on the 'button' it(fadeToggle) fades out , by giving value in 
+        //in braces(2000), it fades out after 2 seconds
+        //you can get 'jquery' in 'CDN' server also, with using that server
+        //we don't need to download the jquery into over system
+        //just copy that code and paste below.
+        //enough!!!!!!!!!!!!!!!!!
+    }
+</script>
+    
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    /* jQuery selectors allow you to select and manipulate 'HTML' element
+     jQuery selectors are used to "find" (or select) HTML elements based
+     on their name, id, classes, types, attributes, values of attributes
+     and much more. It's based on the existing CSS selectors, and in addition 
+     ,it has more custom selectors.
+     */
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    //linking to css
+</head>
+<body>
+    //'id ' cant use at multiple places
+    //class can give at multiple place holders.
+    <h2  class="myheading" id="firstH2">Setting up java query</h2>
+    <h2>Setting up java query</h2>
+    <h2>Setting up java query</h2>
+    <h2>Setting up java  query</h2>
+    <div class="my heading">
+        <p>this is 1st para</p>
+    </div>
+    <button  onclick="fn1()" id="btn1" >click </button>
+    
+    
+</body>
+<script src="js/jquery.js"></script>
+//jquery should be in below bcz we loaded it in above.
+<script>
+    function fn1()
+    {
+        //document.getElementById();
+        //$("h2").action();//action is amethod here.//just a syntax we can to any action at that place.
+    
+        $(".myheading").fadeToggle();
+        //generally, 'id' is called using '#'
+        //'class' called using '.'
+    }
+</script>
+    
+</html>

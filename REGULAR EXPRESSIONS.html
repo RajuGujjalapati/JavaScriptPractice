@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        { 
+
+        //REGULAR EXP.ARE USED TO PERFORM THE POWERFUL PATTERN MATCHING
+            var username= document.getElementById("uname").value;
+            var regex = /E00/;// use 'i' at last for case sensitive
+            if(regex.test(username))
+            {
+                alert("Valid synatx");
+            
+            }
+            else
+            {
+                alert("Invalid syntax");
+
+                document.getElementById("lbluser").style.visibility="visible";
+            
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+        //this form action helps us to make an action when we done width
+        //some function above
+        <input id="uname" placeholder="username"  type="text"><br><br>
+        <label id="lbluser" for="" style="color: aqua; visibility:hidden">*INVALID </label>
+        <br><br>
+        <button onclick="validate()"   type="submit">submit</button>
+</body>
+</html>

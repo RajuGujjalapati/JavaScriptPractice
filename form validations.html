@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var username=document.getElementById("uname");
+            var password=document.getElementById("pass");
+            if (username.value.trim()=="" || password.value.trim()=="")
+            //the function executes befre even when we give spaces also
+            //so, trim() helps us to remove the spaces in the boxes.
+            //any of the username or password leave as balnk will show
+            //that alert message
+            //return false means if it satisfies this condition don't 
+            //go further
+            {
+                alert("No blank allowed")
+                return false;
+            }
+            else
+            {
+                true;//execude when the else satisfies
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+    //return validate() means execute only when return becomes true.
+    <form onsubmit=" return validate()" action="formtag message.html">
+        //this form action helps us to make an action when we done width
+        //some function above
+        <input id="uname" placeholder="username"  type="text"><br><br>
+        
+        <input id="pass" type="password"  placeholder="password">
+        <br>
+        <br>
+        <button onclick="validate()"   type="submit">submit</button>
+    </form>
+    
+</body>
+</html>
